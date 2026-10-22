@@ -1,0 +1,23 @@
+{
+  "name": "dsh-ruflo-panel",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Ruflo tasks, memories and agents inside DeepSeek Harness",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/zjun96472-blip/dsh-ruflo-panel.git" },
+  "homepage": "https://github.com/zjun96472-blip/dsh-ruflo-panel#readme",
+  "bugs": { "url": "https://github.com/zjun96472-blip/dsh-ruflo-panel/issues" },
+  "engines": { "node": ">=24.0.0" },
+  "files": ["lib/", "scripts/", "runtime/", "docs/", "tools/", "README.md", "INSTALL.md", "CHANGELOG.md", "VERIFICATION.md", "CONTRIBUTING.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "config.example.yml", "compatibility.json"],
+  "main": "lib/index.js",
+  "exports": {
+    ".": { "default": "./lib/index.js" },
+    "./client": { "default": "./lib/client.js" },
+    "./package.json": "./package.json"
+  },
+  "dsh": { "client": { "platform": "web", "inject": [
+    "@deepseek-ai/dsh-client-ui-renderer",
+    "@deepseek-ai/dsh-client-ui-sidebar"
+  ] } }
+}

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "better-sqlite3": "12.11.1",
+    "ruflo": "3.59.13",
+    "ruvector": "0.2.41",
+    "ruvector-core-linux-x64-gnu": "0.1.31"
+  }
+}

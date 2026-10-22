@@ -1,0 +1,29 @@
+# 手工安装参考。推荐运行 scripts/install.mjs 自动生成完整配置。
+# 把下面占位路径替换为使用者本人的实际位置；不要直接原样加载。
+- insert:
+    - id: mcp-ruflo
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: ruflo
+        transport: stdio
+        command: /path/to/node
+        args:
+          - /path/to/runtime/node_modules/ruflo/bin/ruflo.js
+          - mcp
+          - start
+          - --tools
+          - memory,task,swarm,workflow,agent,system
+        cwd: /path/to/ruflo-data
+        env:
+          PATH: /path/to/node-directory:/usr/local/bin:/usr/bin:/bin
+          RUFLO_DAEMON_AUTOSTART: '0'
+          CLAUDE_FLOW_AUTO_UPDATE: 'false'
+        toolCallTimeoutMs: 60000
+        failOnStartupError: false
+    - id: ruflo-panel
+      name: ./plugins/dsh-ruflo-panel/lib/index.js
+      config:
+        workspace: /path/to/ruflo-data
+        rufloPackage: /path/to/runtime/node_modules/ruflo
+        serverName: ruflo
+        memoryDatabase: .swarm/agentdb-memory.db

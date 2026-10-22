@@ -1,0 +1,8 @@
+{
+  "platform": "linux",
+  "testedDistribution": "Ubuntu 22.04 (WSL2)",
+  "testedNode": "24.19.0",
+  "testedHarness": "0.2.0-rc.2",
+  "testedRuflo": "3.59.13",
+  "storageAdapter": "ruflo-agentdb-memory-v1"
+}
